@@ -12,6 +12,7 @@ import MainPage from './components/MainPage';
 import ProfileSection from './pages/ProfileSection';
 import LinkResult from './pages/LinkResult'
 import VerifiedLink from './pages/VerifiedLink';
+import Test from './pages/Test';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           {/* <Route path='/contact' element={<Contact/>}/> */}
           <Route path='/register' element={<Register/>}/>
           <Route path='/google-login' element={<GoogleLogin/>}/>
+          <Route path='/test' element={<Test/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </Router>

@@ -24,8 +24,8 @@ const Navbar = () => {
               <Link to="/features" className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Features
               </Link>
-              <Link to="/solutions" className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Solutions
+              <Link to="/test" className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Test
               </Link>
               <Link to="/pricing" className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Pricing
@@ -42,7 +42,7 @@ const Navbar = () => {
               Login
             </Link>
             <Link 
-              to="/signup" 
+              to="/register" 
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors shadow-sm"
             >
               Sign Up
@@ -107,11 +107,11 @@ const Navbar = () => {
               Features
             </Link>
             <Link
-              to="/solutions"
+              to="/test"
               className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Solutions
+              Test
             </Link>
             <Link
               to="/pricing"
@@ -136,7 +136,7 @@ const Navbar = () => {
                 Login
               </Link>
               <Link
-                to="/signup"
+                to="/register"
                 className="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 mt-2 transition-colors"
                 onClick={() => setIsOpen(false)}
               >

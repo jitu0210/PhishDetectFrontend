@@ -6,136 +6,271 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-white via-blue-50 to-indigo-100">
       <Navbar />
-      
-      <div className="flex-grow flex items-center justify-center px-4 py-8 sm:py-4">
-        <div className="max-w-6xl mx-auto w-full">
-          {/* Header */}
-          <header className="flex justify-between items-center mb-12 md:mb-16">
-            <div className="flex items-center">
-              {/* <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div> */}
-              {/* <h1 className="text-2xl font-bold text-gray-900">PhishDetect</h1> */}
-            </div>
-            {/* <button className="text-blue-600 font-medium hover:text-blue-800 transition-colors">
-              Sign In
-            </button> */}
-          </header>
 
-          {/* Main Content */}
-          <main className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
-            <div className="flex-1 text-center lg:text-left">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Protect Your Business from<br />
-                <span className="text-blue-600">Phishing Attacks</span>
-              </h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Advanced cybersecurity solution that identifies and prevents phishing attempts 
-                with AI-powered detection and real-time protection for your organization.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
-                <button
-                  onClick={() => navigate("/mainpage")}
-                  className="bg-blue-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg"
-                >
-                  Get Started
-                </button>
-                <button className="border border-gray-300 text-gray-700 py-3 px-8 rounded-lg font-medium hover:bg-gray-50 transition duration-300">
-                  Learn More
-                </button>
+      {/* Enhanced Hero Section */}
+      <section className="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-8 border border-blue-200 shadow-sm">
+            <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+            AI-Powered Phishing Protection
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            Secure Your Digital 
+            <span className="block">
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                Experience
+              </span>
+            </span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Advanced AI technology to detect and prevent phishing attacks in real-time. 
+            Protect your data before it's too late.
+          </p>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto mb-12">
+            {[
+              { value: "99.8%", label: "Accuracy Rate" },
+              { value: "50K+", label: "Links Analyzed" },
+              { value: "24/7", label: "Real-time Monitoring" },
+              { value: "1s", label: "Detection Speed" }
+            ].map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative inline-block">
+                  <div className="text-2xl sm:text-3xl font-bold text-blue-600 group-hover:scale-110 transition-transform duration-300">
+                    {stat.value}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-5 blur-md transition-opacity duration-300 rounded-lg"></div>
+                </div>
+                <div className="text-sm text-gray-600 mt-2">{stat.label}</div>
               </div>
-              
-              <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-gray-500 text-sm">
-                <div className="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Real-time detection
-                </div>
-                <div className="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  AI-powered
-                </div>
-                <div className="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  99.9% Accurate
-                </div>
-              </div>
-            </div>
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <button
+              onClick={() => navigate("/mainpage")}
+              className="group relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-8 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2 min-w-[200px] justify-center overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              Start Protecting Now
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </button>
             
-            <div className="flex-1 w-full max-w-md lg:max-w-lg">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-lg border border-gray-100">
-                <div className="bg-white rounded-xl p-5 shadow-md mb-4">
-                  <div className="flex items-start">
-                    <div className="bg-blue-100 p-2 rounded-lg mr-4 flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Suspicious Email Detected</h3>
-                      <p className="text-sm text-gray-600 mt-1">PhishDetect blocked a potential threat</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                    <div className="text-blue-600 font-bold text-xl">98%</div>
-                    <div className="text-sm text-gray-600 mt-1">Detection Rate</div>
-                  </div>
-                  <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                    <div className="text-blue-600 font-bold text-xl">24/7</div>
-                    <div className="text-sm text-gray-600 mt-1">Protection</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </main>
-          
-          {/* Trusted By Section */}
-          <div className="mt-16 md:mt-20">
-            <p className="text-gray-500 text-sm text-center mb-6">TRUSTED BY INDUSTRY LEADERS</p>
-            <div className="flex flex-wrap justify-center gap-6 md:gap-8 opacity-70">
-              {["Microsoft", "Google", "Amazon", "IBM", "Cisco", "Deloitte"].map((company, index) => (
-                <div key={index} className="font-medium text-gray-700 text-sm md:text-base">
+            <button className="group relative border-2 border-gray-300 text-gray-700 py-4 px-8 rounded-xl font-medium hover:border-blue-500 hover:text-blue-600 transition-all duration-300 flex items-center gap-2 min-w-[200px] justify-center overflow-hidden">
+              <div className="absolute inset-0 bg-blue-500/5 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="relative z-10">Watch Demo</span>
+            </button>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 opacity-70">
+            <div className="text-sm text-gray-500 font-medium">Trusted by security teams at</div>
+            <div className="flex flex-wrap justify-center items-center gap-6">
+              {['TechCorp', 'SecureNet', 'DataGuard', 'CyberShield'].map((company, index) => (
+                <div key={index} className="text-gray-700 font-semibold text-lg hover:text-blue-600 transition-colors duration-300 cursor-default">
                   {company}
                 </div>
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Stats Section */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">10M+</div>
-              <div className="text-xs md:text-sm text-gray-600">Links Analyzed</div>
+      {/* Enhanced Features Section */}
+      <section className="py-16 lg:py-24 bg-white/50 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Why Choose <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">PhishDetect</span>?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Advanced protection powered by machine learning and real-time threat intelligence
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: '🚀',
+                title: 'Real-time Detection',
+                description: 'Instant analysis of URLs with AI-powered algorithms that learn and adapt to new threats.',
+                gradient: 'from-blue-500 to-cyan-500'
+              },
+              {
+                icon: '🛡️',
+                title: 'Advanced Protection',
+                description: 'Multi-layered security approach combining pattern recognition and behavioral analysis.',
+                gradient: 'from-green-500 to-emerald-500'
+              },
+              {
+                icon: '📊',
+                title: 'Detailed Analytics',
+                description: 'Comprehensive reports and insights into detected threats and security trends.',
+                gradient: 'from-purple-500 to-pink-500'
+              },
+              {
+                icon: '🔍',
+                title: 'Deep Scan Technology',
+                description: 'In-depth analysis of website structure, content, and behavioral patterns.',
+                gradient: 'from-orange-500 to-red-500'
+              },
+              {
+                icon: '🌐',
+                title: 'Browser Integration',
+                description: 'Seamless protection with browser extensions for all major platforms.',
+                gradient: 'from-indigo-500 to-blue-500'
+              },
+              {
+                icon: '⚡',
+                title: 'Lightning Fast',
+                description: 'Sub-second analysis without compromising your browsing experience.',
+                gradient: 'from-yellow-500 to-amber-500'
+              }
+            ].map((feature, index) => (
+              <div 
+                key={index}
+                className="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-transparent transform hover:-translate-y-3 overflow-hidden"
+              >
+                {/* Background Gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                
+                {/* Animated Border */}
+                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
+                  <div className="absolute inset-[2px] rounded-2xl bg-white"></div>
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className={`text-4xl mb-6 transform group-hover:scale-110 transition-transform duration-300 inline-block p-3 rounded-2xl bg-gradient-to-br ${feature.gradient} bg-opacity-10`}>
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-indigo-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    {feature.description}
+                  </p>
+                  
+                  {/* Learn More Link */}
+                  <div className="mt-6 flex items-center text-sm font-medium text-gray-500 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
+                    Learn more
+                    <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Coming Soon Banner */}
+      <section className="relative py-20 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"></div>
+        
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-300 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Text Content */}
+            <div className="text-center lg:text-left lg:flex-1">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/30">
+                <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                Coming Soon
+              </div>
+              
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                Next Generation 
+                <span className="block bg-gradient-to-r from-cyan-300 to-blue-200 bg-clip-text text-transparent">
+                  Protection
+                </span>
+              </h3>
+              
+              <p className="text-xl text-blue-100 max-w-2xl mb-8 leading-relaxed">
+                Advanced AI features, real-time monitoring, and enhanced threat intelligence 
+                powered by cutting-edge machine learning algorithms.
+              </p>
+
+              {/* Feature List */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {[
+                  "Enhanced AI Detection",
+                  "Real-time Dashboard",
+                  "Browser Extensions",
+                  "API Integration"
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3 text-blue-100">
+                    <div className="w-2 h-2 bg-cyan-300 rounded-full"></div>
+                    <span className="font-medium">{feature}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">99.9%</div>
-              <div className="text-xs md:text-sm text-gray-600">Uptime</div>
-            </div>
-            <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-xs md:text-sm text-gray-600">Monitoring</div>
-            </div>
-            <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">50+</div>
-              <div className="text-xs md:text-sm text-gray-600">Integrations</div>
+
+            {/* CTA Cards */}
+            <div className="lg:flex-1 max-w-md w-full">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl">
+                <h4 className="text-2xl font-bold text-white mb-4">Be the First to Know</h4>
+                <p className="text-blue-100 mb-6">
+                  Join our waitlist and get early access to the next generation of phishing protection.
+                </p>
+                
+                <div className="space-y-4">
+                  <button
+                    onClick={() => navigate("/mainpage")}
+                    className="w-full bg-white text-blue-600 py-4 px-6 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 group"
+                  >
+                    <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Try Current Version
+                  </button>
+                  
+                  <button className="w-full border-2 border-white text-white py-4 px-6 rounded-xl font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2 group backdrop-blur-sm">
+                    <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Join Waitlist
+                  </button>
+                </div>
+
+                {/* Countdown or Progress */}
+                <div className="mt-6 pt-6 border-t border-white/20">
+                  <div className="flex justify-between text-sm text-blue-200 mb-2">
+                    <span>Early Access Spots</span>
+                    <span>247/500</span>
+                  </div>
+                  <div className="w-full bg-white/20 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full w-1/2"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
+      </section>
+
       <Footer />
     </div>
   );
